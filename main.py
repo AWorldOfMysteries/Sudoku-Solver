@@ -80,17 +80,10 @@ invMatrix = cv2.getPerspectiveTransform(pts1, pts2)
 imgInvWarped = cv2.warpPerspective(imgSolvedDigits, invMatrix, (widthImage, heightImage))
 imgOverlayed = cv2.addWeighted(imgInvWarped, 1, img, 0.4, 1)
 
-
-
-
-# imageArray = ([img, imgBlank, imgBlank, imgBlank],
-#             [imgBlank, imgBlank, imgBlank, imgBlank])
-# stackedImage = stackImages(imageArray, 1)
-
 cv2.imshow('OUTPUT', imgOverlayed)
 cv2.imshow('INPUT IMAGE', img)
-# cv2.imshow('Stacked Images3', imgSolvedDigits)
-# cv2.imshow('Stacked Images4', )
+# cv2.imshow('Images2', imgSolvedDigits)
+# cv2.imshow('Images3', )
 cv2.waitKey(0)
 
 

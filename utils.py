@@ -143,19 +143,3 @@ def solveSudoku(arr):
             arr[row][col] = 0       # If a num is safe, but there doesn't exist a solution with it; the location must be set to 0 for further iterations of num 
 
     return False  # Backtracking
-
-
-
-
-# def stackImages(imgArray, scale):
-#     rows = len(imgArray) # 2
-#     cols = len(imgArray[0]) # 4
-#     rowsAvailable = isinstance(imgArray[0], list)
-#     width = imgArray[0][0].shape[1]
-#     height = imgArray[0][0].shape[0]
-#     if rowsAvailable:
-#         for x in range(0, rows):
-#             for y in range(0, cols):
-#                 imgArray[x][y] = cv2.resize(imgArray[x][y], (0, 0), None, scale, scale)
-#                 if len(imgArray[x][y].shape) == 2:
-#                     imgArray[x][y] = cv2.cvtColor(imgArray[x][y], cv2.COLOR_BGR2GRAY) 
